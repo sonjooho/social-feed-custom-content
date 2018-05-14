@@ -46,5 +46,10 @@ curl_close($curl);
 
 $tp = json_decode($response,true);
 
-echo $tp['data'][0]['title'];
+//echo $tp['data'][0]['title'];
+
+for($i = 0, $l = count($tp['data']); $i < $l; ++$i) {
+ echo $tp['data'][i]['title'];
+}
+
 ?>
