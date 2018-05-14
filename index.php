@@ -44,8 +44,6 @@ $err = curl_error($curl);
 
 curl_close($curl);
 echo $response
- 
-echo "\n"
   
 $tp = json_decode($response,true);
 
