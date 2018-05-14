@@ -43,9 +43,9 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
 
 curl_close($curl);
-echo $response
+echo $response;
 
 $tp = json_decode($response,true);
 
-echo $tp[0].['title']
+echo $tp['title'];
 ?>
