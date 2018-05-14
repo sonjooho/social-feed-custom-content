@@ -28,7 +28,7 @@
 <img width="30%" src="https://social-feeds-custom-content.herokuapp.com/bigicon.png" />
 <br />
 
-Social Studio Feed Display4
+Social Studio Feed Display5
 <br />
 
 
@@ -150,7 +150,7 @@ content += "<div><div class='list-group' id='list-tab' role='tablist'>";
 for (i in obj.data) {
 
 //content += "THIS IS THE POST!";
- content += "<a class='list-group-item list-group-item-action ctstyle itemlist' id='list-home-list' data-toggle='list' href='#list-home' role='tab' aria-controls='home' onclick='javascript:chosen('image1')'><image width='20%' id='image1' src='http://image.s4.exct.net/lib/fe8e1574746203787c/m/1/00b79af2-833a-4362-8c1a-81341a9079ce.jpg' /> <span style='padding-left: 20px'>Image 1</span></a>";
+ content += "<a class='list-group-item list-group-item-action ctstyle itemlist' id='list-home-list' data-toggle='list' href='#list-home' role='tab' aria-controls='home' onclick='javascript:chosen('image1')'><image width='20%' id='image1' src='http://image.s4.exct.net/lib/fe8e1574746203787c/m/1/00b79af2-833a-4362-8c1a-81341a9079ce.jpg' /> <span style='padding-left: 20px'>Social Post " + i + "</span></a><br/>";
 
 }
 
@@ -158,7 +158,7 @@ content += "</div></div>";
 
      sdk.setContent(content);
 
- alert("test");
+ //alert("test");
 
 }//end function chosen
       
