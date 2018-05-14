@@ -22,7 +22,7 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-$ar = json_decode($response);
+$ar = json_decode($response,true);
 
 echo $ar['access_token'];
 
