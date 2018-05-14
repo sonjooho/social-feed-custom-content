@@ -35,7 +35,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTPHEADER => array(
     "Cache-Control: no-cache",
     "Postman-Token: 6b9c8e8c-91d6-4aca-a0a9-4074d99714b3",
-    "access_token: $ar['access_token']"
+    "access_token: {$ar['access_token']}"
   ),
 ));
 
