@@ -46,7 +46,8 @@ curl_close($curl);
 
 $tp = json_decode($response,true);
 
-foreach($tp as $value){
-     echo $tp[$value].['title']."\n";
- }
+for($i = 0, $l = count($tp); $i < $l; ++$i) {
+ echo $tp[$i].['title']."\n";
+}
+     
 ?>
