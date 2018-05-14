@@ -67,33 +67,53 @@ Social Studio Feed Display
 
   <script>
 
-    var selectedImageId, image, output, url,data;
+    var selectedImageId, image, output, url, data, obj;
 
 
 //var password, clientId, clientSecret, username;
 
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://api.socialstudio.radian6.com/oauth/token",
-  "method": "POST",
-  "headers": {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Cache-Control": "no-cache"
-  },
-  "data": {
+// var settings = {
+//   "async": false,
+//   "crossDomain": true,
+//   "url": "https://api.socialstudio.radian6.com/oauth/token",
+//   "method": "POST",
+//   "data": {
+//     "grant_type": "password",
+//     "client_id": "mcxxe11808eec6214492ba92dc49d8824c3d",
+//     "client_secret": "5ed9314d51f340888ffd36f4364ffbae",
+//     "username": "r6-json",
+//     "password": "Thswnghdudwn$017"
+//   }
+// }
+
+// $.ajax(settings).done(function (response) {
+//   //console.log(response);
+//   alert(response);
+// });
+
+var response = '';
+$.ajax({ method: "POST",   
+         url: "https://api.socialstudio.radian6.com/oauth/token",   
+         async: false,
+    "data": {
     "grant_type": "password",
     "client_id": "mcxxe11808eec6214492ba92dc49d8824c3d",
     "client_secret": "5ed9314d51f340888ffd36f4364ffbae",
     "username": "r6-json",
     "password": "Thswnghdudwn$017"
-  }
-}
-
-$.ajax(settings).done(function(response) {
-  //console.log(response);
-  alert("hello");
+  },
+  success : function(text)
+         {
+             response = text;
+             alert("test");
+         },
+         error: function(error){
+          //obj = jQuery.parseJSON(error);
+          alert("an error has been found" + JSON.stringify(error));
+        }
 });
+
+alert('outside: '+response);
 
 
 var output = '{"data": [{"id": "4","title": "topic1"},{"id": "5","title": "topic2"}]}';
@@ -103,7 +123,7 @@ var obj = jQuery.parseJSON(output);
 //alert( obj.data[0].title );
 
 for (i in obj.data) {
-  alert( obj.data[i].title );  
+ // alert( obj.data[i].title );  
 }
 
 
