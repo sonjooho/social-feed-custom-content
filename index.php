@@ -43,12 +43,15 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
 
 curl_close($curl);
-
+echo $response
+ 
+echo "\n"
+  
 $tp = json_decode($response,true);
 
-echo "count($tp)\n";
+echo "{count($tp)}\n";
 
-echo "$tp[0].['title']\n";
+echo "{$tp[0].['title']}\n";
 
 for($i = 0, $l = count($tp); $i < $l; ++$i) {
  echo $tp[$i].['title']."\n";
