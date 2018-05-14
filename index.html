@@ -79,21 +79,20 @@ var settings = {
   "method": "POST",
   "headers": {
     "Content-Type": "application/x-www-form-urlencoded",
-    "Cache-Control": "no-cache",
-    "Postman-Token": "d2879a71-8ae5-4cb2-8acf-2aac5981f7c8"
+    "Cache-Control": "no-cache"
   },
   "data": {
     "grant_type": "password",
-    "client_id": "mcxx547b8135de534ea39cc2ee0324330d86",
-    "client_secret": "0cba3c8dfde34cf98b786f609029f5b2",
-    "username": "r6-cleow",
-    "password": "!Salesforce12345"
+    "client_id": "mcxxe11808eec6214492ba92dc49d8824c3d",
+    "client_secret": "5ed9314d51f340888ffd36f4364ffbae",
+    "username": "r6-json",
+    "password": "Thswnghdudwn$017"
   }
 }
 
-$.ajax(settings).done(function (response) {
+$.ajax(settings).done(function(response) {
   //console.log(response);
-  alert(response + '');
+  alert("hello");
 });
 
 
@@ -104,7 +103,7 @@ var obj = jQuery.parseJSON(output);
 //alert( obj.data[0].title );
 
 for (i in obj.data) {
- // alert( obj.data[i].title );  
+  alert( obj.data[i].title );  
 }
 
 
