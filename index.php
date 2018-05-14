@@ -24,7 +24,7 @@ curl_close($curl);
 
 $ar = json_decode($response);
 
-echo $ar[0];
+echo $ar['access_token'];
 
 if ($err) {
   echo "cURL Error #:" . $err;
