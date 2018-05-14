@@ -46,7 +46,7 @@ curl_close($curl);
 
 $tp = json_decode($response,true);
 
-echo $tp['data'][0]['title'];
+echo $tp['data'][0]['title']."\n";
 //echo "\n"
 echo $tp['data'][1]['title'];
 //echo "\n"
