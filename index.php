@@ -46,11 +46,11 @@ curl_close($curl);
 
 $tp = json_decode($response,true);
 
-echo $tp['data'][0]['title']."\n";
+echo $tp['data'][0]['title']."<br>";
 //echo "\n"
-echo $tp['data'][1]['title'];
+echo $tp['data'][1]['title']."<br>";
 //echo "\n"
-echo $tp['data'][2]['title'];
+echo $tp['data'][2]['title']."<br>";
 //echo "\n"
 //echo count($tp['data'])
 
