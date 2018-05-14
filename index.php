@@ -24,7 +24,25 @@ curl_close($curl);
 
 $ar = json_decode($response,true);
 
-echo $ar['access_token'];
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.socialstudio.radian6.com/v3/topics?status=4",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "Cache-Control: no-cache",
+    "Postman-Token: 6b9c8e8c-91d6-4aca-a0a9-4074d99714b3",
+    "access_token: "&$ar['access_token']
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
 
 if ($err) {
   echo "cURL Error #:" . $err;
