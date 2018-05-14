@@ -49,12 +49,7 @@ echo "\n"
   
 $tp = json_decode($response,true);
 
-echo "{count($tp)}\n";
+echo count($tp)
 
-echo "{$tp[0].['title']}\n";
-
-for($i = 0, $l = count($tp); $i < $l; ++$i) {
- echo $tp[$i].['title']."\n";
-}
      
 ?>
