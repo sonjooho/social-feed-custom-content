@@ -29,4 +29,29 @@ if ($err) {
   echo $response;
 }
 
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.socialstudio.radian6.com/v3/topics/{{TPID}}",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "Cache-Control: no-cache",
+    "Postman-Token: e5a6894b-0879-4ba3-83dc-e55c56ae58f8",
+    "access_token: {9912d086-baf5-4ec4-b424-cfde27d735d4}"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+
 ?>
