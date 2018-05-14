@@ -47,6 +47,6 @@ curl_close($curl);
 $tp = json_decode($response,true);
 
 foreach($tp as $value){
-     echo $value."\n";
+     echo $tp[$value].['title']."\n";
  }
 ?>
