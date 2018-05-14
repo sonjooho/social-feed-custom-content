@@ -47,5 +47,5 @@ echo $response
 
 $tp = json_decode($response,true);
 
-echo $tp[0].['title'];
+echo $tp[0].['title']
 ?>
